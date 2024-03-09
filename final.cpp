@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-// int cnt = 10;
+
 int console_x = 1350;
 int flag;
 
@@ -109,7 +109,6 @@ void drawboxInput1stwindow()
     iText(5, 380 + 160, "6. Trigonometric Functions");
     iText(5, 380 + 140, "7. Inverse Trigonometric Functions");
 }
-
 void SL_1st_window()
 {
     iSetColor(0, 0, 0);
@@ -141,7 +140,6 @@ void SL_3_window()
     iSetColor(255, 255, 255);
     iText(5, 380 + 280, "Please enter the values of y1, x1 and m");
 }
-
 void QUAD_1st_window()
 {
     iSetColor(0, 0, 0);
@@ -173,7 +171,6 @@ void QUAD_3_window()
     iSetColor(255, 255, 255);
     iText(0 + 5, 380 + 280, "Please enter the values of a, R1 and R2");
 }
-
 void CONICS_1st_window()
 {
     iSetColor(0, 0, 0);
@@ -185,7 +182,6 @@ void CONICS_1st_window()
     iText(0 + 5, 380 + 205, "3. Ellipse");
     iText(0 + 5, 380 + 180, "4. Hyperbola");
 }
-
 void CONICS_Circle_window()
 {
     iSetColor(0, 0, 0);
@@ -209,7 +205,6 @@ void CONICS_Circle_2_window()
     iSetColor(255, 255, 255);
     iText(0 + 5, 380 + 280, "Please enter the values of g, f and c");
 }
-
 void CONICS_Parabola_window()
 {
     iSetColor(0, 0, 0);
@@ -233,7 +228,6 @@ void CONICS_Parabola_2_window()
     iSetColor(255, 255, 255);
     iText(0 + 5, 380 + 280, "Please enter the values of a, k, h in x = a(y-k)^2 +h");
 }
-
 void CONICS_Ellipse_window()
 {
     iSetColor(0, 0, 0);
@@ -241,7 +235,6 @@ void CONICS_Ellipse_window()
     iSetColor(255, 255, 255);
     iText(0 + 5, 380 + 280, "Please enter the values of h, k, a and b in (x-h)^2 /a^2 + (y-k)^2/ b^2 =1");
 }
-
 void CONICS_Hyperbola_1_window()
 {
     iSetColor(0, 0, 0);
@@ -249,7 +242,6 @@ void CONICS_Hyperbola_1_window()
     iSetColor(255, 255, 255);
     iText(0 + 5, 380 + 280, "Enter the values of h, a, k and b in (x-h)^2 /a^2 - (y-k)^2/ b^2 =1");
 }
-
 void EXPONENTIAL_1st_window()
 {
     iSetColor(0, 0, 0);
@@ -294,7 +286,6 @@ void EXPONENTIAL_4_window()
     // e=2.71828
     iText(0 + 5, 380 + 280, "Enter the value of k and a");
 }
-
 void LOGARITHMIC_1st_window()
 {
     iSetColor(0, 0, 0);
@@ -357,9 +348,10 @@ void Inverse_Trigonometric_1_window()
     // e=2.71828
     iText(0 + 5, 380 + 280, "Enter the values of k, a, b and c");
 }
+
+
 void drawline()
 {
-
     for (int i = 0; i < num_lines; i++)
     {
 
@@ -373,7 +365,6 @@ void drawline()
         iLine(a1[i] - diff_x + 2, b1[i] - diff_y, a2[i] - diff_x + 2, b2[i] - diff_y);
     }
 }
-
 void drawcircle()
 {
 
@@ -389,9 +380,7 @@ void drawcircle()
         iCircle(h[i] - diff_x, k[i] - diff_y, r[i] + 1, 500);
     }
 }
-
 void Ellipse()
-
 {
 
     for (int i = 0; i < num_ellipses; i++)
@@ -406,7 +395,6 @@ void Ellipse()
         iEllipse(x1_ellipse[i] - diff_x, y1_ellipse[i] - diff_y, major_axis[i] - 0.5, minor_axis[i] - 0.5, 500);
     }
 }
-
 // quadratic-1
 void drawCurvePositive()
 {
@@ -468,7 +456,6 @@ void drawCurveNegative()
         }
     }
 }
-
 // qaudratic-2
 void draw_QuadCurve_Positive()
 {
@@ -532,7 +519,6 @@ void draw_QuadCurve_Negative()
         }
     }
 }
-
 // quadratic-3
 void draw__Curve__Positive()
 {
@@ -821,7 +807,6 @@ void drawHyperbolaLower()
         }
     }
 }
-
 // exponential
 void draw_exponentialcurve1()
 {
@@ -863,7 +848,7 @@ void draw_exponentialcurve2()
         xPrev142 = 100;
         yPrev142 = expo_k2[i] * pow(2.71828, -xPrev142);
         x142 = xPrev142 - 0.15;
-        y142 = expo_k[i] * pow(2.71828, -x142);
+        y142 = expo_k2[i] * pow(2.71828, -x142);
 
         for (int j = 0; j <= 800; j++)
         {
@@ -945,7 +930,7 @@ void draw_exponentialcurve4()
         }
     }
 }
-
+//Logarithmic
 void draw_logarithmic_151()
 
 {
@@ -1010,7 +995,7 @@ void draw_logarithmic_152()
         }
     }
 }
-
+//Trigonometric
 void draw_sin()
 {
 
@@ -1109,7 +1094,6 @@ void draw_tan()
         }
     }
 }
-
 void draw_cosec_half()
 {
 
@@ -1281,7 +1265,7 @@ void draw_cot()
         }
     }
 }
-
+//Inverse Trigonometric
 void draw_sin_inv()
 {
 
@@ -1387,10 +1371,12 @@ void draw_cosec_inv_half()
     {
 
         xPrev174 = -100;
-        yPrev174 = icosec_k_1[i] + icosec_a_1[i] * 1 / asin(icosec_b_1[i] * xPrev174 + icosec_c_1[i]);
+        // yPrev174 = icosec_k_1[i] + icosec_a_1[i] * 1 / asin(icosec_b_1[i] * xPrev174 + icosec_c_1[i]);
+        yPrev174 = icosec_k_1[i] + icosec_a_1[i] *  asin(1/(icosec_b_1[i] * xPrev174 + icosec_c_1[i]));
 
         x174 = xPrev174;
-        y174 = icosec_k_1[i] + icosec_a_1[i] * 1 / asin(icosec_b_1[i] * x174 + icosec_c_1[i]);
+        // y174 = icosec_k_1[i] + icosec_a_1[i] * 1 / asin(icosec_b_1[i] * x174 + icosec_c_1[i]);
+        y174 = icosec_k_1[i] + icosec_a_1[i] *  asin(1/(icosec_b_1[i] * x174 + icosec_c_1[i]));
         int temp = i % 5;
         if (darkmode)
             iSetColor(red_dark[temp], green_dark[temp], blue_dark[temp]);
@@ -1408,7 +1394,8 @@ void draw_cosec_inv_half()
             xPrev174 = x174;
             yPrev174 = y174;
             x174 += 0.1;
-            y174 = icosec_k_1[i] + icosec_a_1[i] * 1 / asin(icosec_b_1[i] * x174 + icosec_c_1[i]);
+            //y174 = icosec_k_1[i] + icosec_a_1[i] * 1 / asin(icosec_b_1[i] * x174 + icosec_c_1[i]);
+            y174 = icosec_k_1[i] + icosec_a_1[i] *  asin(1/(icosec_b_1[i] * x174 + icosec_c_1[i]));
         }
     }
 }
@@ -1421,10 +1408,10 @@ void draw_cosec_inv_otherhalf()
     {
 
         xPrev174 = -100;
-        yPrev174 = icosec_k_1[i] + icosec_a_1[i] * 1 / asin(icosec_b_1[i] * xPrev174 + icosec_c_1[i]);
+        yPrev174 = icosec_k_1[i] + icosec_a_1[i] *  asin(1 /(icosec_b_1[i] * xPrev174 + icosec_c_1[i]));
 
         x174 = xPrev174;
-        y174 = icosec_k_1[i] + icosec_a_1[i] * 1 / asin(icosec_b_1[i] * x174 + icosec_c_1[i]);
+        y174 = icosec_k_1[i] + icosec_a_1[i] * asin(1/(icosec_b_1[i] * x174 + icosec_c_1[i]));
         int temp = i % 5;
         if (darkmode)
             iSetColor(red_dark[temp], green_dark[temp], blue_dark[temp]);
@@ -1442,7 +1429,7 @@ void draw_cosec_inv_otherhalf()
             xPrev174 = x174;
             yPrev174 = y174;
             x174 += 0.15;
-            y174 = icosec_k_1[i] + icosec_a_1[i] * 1 / asin(icosec_b_1[i] * x174 + icosec_c_1[i]);
+            y174 = icosec_k_1[i] + icosec_a_1[i] *  asin(1 /(icosec_b_1[i] * x174 + icosec_c_1[i]));
         }
     }
 }
@@ -1455,10 +1442,10 @@ void draw_sec_inv()
     {
 
         xPrev175 = -100;
-        yPrev175 = isec_k_1[i] + isec_a_1[i] * 1 / acos(isec_b_1[i] * xPrev175 + isec_c_1[i]);
+        yPrev175 = isec_k_1[i] + isec_a_1[i] *  acos(1 /(isec_b_1[i] * xPrev175 + isec_c_1[i]));
 
         x175 = xPrev175;
-        y175 = isec_k_1[i] + isec_a_1[i] * 1 / acos(isec_b_1[i] * x175 + isec_c_1[i]);
+        y175 = isec_k_1[i] + isec_a_1[i] *acos(1/(isec_b_1[i] * x175 + isec_c_1[i]));
         int temp = i % 5;
         if (darkmode)
             iSetColor(red_dark[temp], green_dark[temp], blue_dark[temp]);
@@ -1474,7 +1461,7 @@ void draw_sec_inv()
             xPrev175 = x175;
             yPrev175 = y175;
             x175 += 0.1;
-            y175 = isec_k_1[i] + isec_a_1[i] * 1 / acos(isec_b_1[i] * x175 + isec_c_1[i]);
+            y175 = isec_k_1[i] + isec_a_1[i] * acos(1/(isec_b_1[i] * x175 + isec_c_1[i]));
         }
     }
 }
@@ -1487,10 +1474,10 @@ void draw_cot_inv_half()
     {
 
         xPrev176 = -100;
-        yPrev176 = icot_k_1[i] + icot_a_1[i] * 1 / (atan(icot_b_1[i] * xPrev176 + icot_c_1[i]));
+        yPrev176 = icot_k_1[i] + icot_a_1[i] * (atan(1/(icot_b_1[i] * xPrev176 + icot_c_1[i])));
 
         x176 = xPrev176;
-        y176 = icot_k_1[i] + icot_a_1[i] * 1 / (atan(icot_b_1[i] * x176 + icot_c_1[i]));
+        y176 = icot_k_1[i] + icot_a_1[i] * (atan(1/(icot_b_1[i] * x176 + icot_c_1[i])));
         int temp = i % 5;
         if (darkmode)
             iSetColor(red_dark[temp], green_dark[temp], blue_dark[temp]);
@@ -1508,7 +1495,7 @@ void draw_cot_inv_half()
             xPrev176 = x176;
             yPrev176 = y176;
             x176 += 0.0915;
-            y176 = icot_k_1[i] + icot_a_1[i] * 1 / (atan(icot_b_1[i] * x176 + icot_c_1[i]));
+            y176 = icot_k_1[i] + icot_a_1[i] * (atan(1/(icot_b_1[i] * x176 + icot_c_1[i])));
         }
     }
 }
@@ -1521,10 +1508,10 @@ void draw_cot_inv_otherhalf()
     {
 
         xPrev176 = -100;
-        yPrev176 = icot_k_1[i] + icot_a_1[i] * 1 / (atan(icot_b_1[i] * xPrev176 + icot_c_1[i]));
+        yPrev176 = icot_k_1[i] + icot_a_1[i] * (atan(1/(icot_b_1[i] * xPrev176 + icot_c_1[i])));
 
         x176 = xPrev176;
-        y176 = icot_k_1[i] + icot_a_1[i] * 1 / (atan(icot_b_1[i] * x176 + icot_c_1[i]));
+        y176 = icot_k_1[i] + icot_a_1[i] * (atan(1/(icot_b_1[i] * x176 + icot_c_1[i])));
         int temp = i % 5;
         if (darkmode)
             iSetColor(red_dark[temp], green_dark[temp], blue_dark[temp]);
@@ -1542,7 +1529,7 @@ void draw_cot_inv_otherhalf()
             xPrev176 = x176;
             yPrev176 = y176;
             x176 += 0.092;
-            y176 = icot_k_1[i] + icot_a_1[i] * 1 / (atan(icot_b_1[i] * x176 + icot_c_1[i]));
+            y176 = icot_k_1[i] + icot_a_1[i] * (atan(1/(icot_b_1[i] * x176 + icot_c_1[i])));
         }
     }
 }
@@ -1854,16 +1841,13 @@ void iDraw()
         iSetColor(255, 255, 255);
         iText(5, 380 + 120, str);
     }
-
     if (mode == 11) // text box for what type of sl to draw
-
     {
         SL_1st_window();
         iSetColor(255, 255, 255);
         iText(5, 380 + 210, str);
         flag11 = 1;
     }
-
     if (mode == 111) // for y=mx+c
 
     {
@@ -1873,7 +1857,6 @@ void iDraw()
         iText(5, 380 + 230, str);
         flag111 = 1;
     }
-
     if (mode == 112) // for x/a+y/b=1
     {
 
@@ -1882,7 +1865,6 @@ void iDraw()
         iText(5, 380 + 230, str);
         flag112 = 1;
     }
-
     if (mode == 113) // for(y-y1)=m(x-x1)
     {
 
@@ -1891,7 +1873,6 @@ void iDraw()
         iText(5, 380 + 230, str);
         flag113 = 1;
     }
-
     if (mode == 12) // Quadratic equations
 
     {
@@ -1901,17 +1882,15 @@ void iDraw()
         iText(5, 380 + 210, str);
         flag12 = 1;
     }
-
     if (mode == 121) // for y=ax^2+bx+c
 
-    { // CHANGE HERE
+    { 
 
         QUAD_1_window();
         iSetColor(255, 255, 255);
         iText(5, 380 + 230, str);
         flag121 = 1;
     }
-
     if (mode == 122) // for y=a(x-h)^2+k
 
     {
@@ -1921,7 +1900,6 @@ void iDraw()
         iText(5, 380 + 230, str);
         flag122 = 1;
     }
-
     if (mode == 123) // for y = a(x - R1)(x - R2)
 
     {
@@ -1931,7 +1909,6 @@ void iDraw()
         iText(5, 380 + 230, str);
         flag123 = 1;
     }
-
     if (mode == 13) // FOR CONICS
     {
 
@@ -1940,7 +1917,6 @@ void iDraw()
         iText(5, 380 + 160, str);
         flag13 = 1;
     }
-
     if (mode == 131) // FOR CIRCLES
 
     {
@@ -1950,7 +1926,6 @@ void iDraw()
         iText(5, 380 + 230, str);
         flag131 = 1;
     }
-
     if (mode == 1311) // FOR CIRCLES OF THE FORM(x - h) ^ 2 + (y - k) ^ 2 = r ^ 2
 
     {
@@ -1959,7 +1934,6 @@ void iDraw()
         iText(5, 380 + 210, str);
         flag1311 = 1;
     }
-
     if (mode == 1312) // FOR CIRCLES OF THE FORM x^2 + y^2 + 2gx + 2fy + c = 0
 
     {
@@ -1969,7 +1943,6 @@ void iDraw()
         iText(5, 380 + 210, str);
         flag1312 = 1;
     }
-
     if (mode == 132) // FOR PARABOLAS
 
     {
@@ -1979,7 +1952,6 @@ void iDraw()
         iText(5, 380 + 210, str);
         flag132 = 1;
     }
-
     if (mode == 1321) // FOR A PARABOLA OF THE FORM  y = a(x-h)^2+k
 
     {
@@ -1989,7 +1961,6 @@ void iDraw()
         iText(5, 380 + 210, str);
         flag1321 = 1;
     }
-
     if (mode == 1322) // FOR A PARABOLA OF THE FORM x = a(y-k)^2 +h
 
     {
@@ -1998,7 +1969,6 @@ void iDraw()
         iText(5, 380 + 210, str);
         flag1322 = 1;
     }
-
     if (mode == 133) // FOR ELLIPSES
 
     {
@@ -2008,7 +1978,6 @@ void iDraw()
         iText(5, 380 + 230, str);
         flag133 = 1;
     }
-
     if (mode == 134) //  FOR HYPERBOLAS
 
     {
@@ -2018,7 +1987,6 @@ void iDraw()
         iText(5, 380 + 230, str);
         flag134 = 1;
     }
-   
     if (mode == 14) // FOR EXPONENTIAL EQUATIONS
 
     {
@@ -2060,7 +2028,6 @@ void iDraw()
         iText(5, 380 + 220, str);
         flag144 = 1;
     }
-
     if (mode == 15) // FOR Logarithmic EQUATIONS
 
     {
@@ -2069,7 +2036,6 @@ void iDraw()
         iText(5, 380 + 230 - 50, str);
         flag15 = 1;
     }
-
     if (mode == 151)
     {
         LOGARITHMIC_1_window();
@@ -2133,7 +2099,6 @@ void iDraw()
         iText(5, 380 + 230 - 50, str);
         flag166 = 1;
     }
-
     if (mode == 17) // FOR Inverse Trigonometric EQUATIONS
     {
         Inverse_Trigonometric_1st_window();
@@ -2529,7 +2494,6 @@ void iKeyboard(unsigned char key)
             }
         }
     }
-
     if (mode == 121) // Quadratic-1
     {
 
@@ -2673,7 +2637,6 @@ void iKeyboard(unsigned char key)
             }
         }
     }
-
     if (mode == 131)
     {
 
@@ -2783,7 +2746,6 @@ void iKeyboard(unsigned char key)
             len++;
         }
     }
-
     if (mode == 132)
     {
 
@@ -2883,7 +2845,6 @@ void iKeyboard(unsigned char key)
             len++;
         }
     }
-
     if (mode == 133) // Ellipse
     {
 
@@ -2920,8 +2881,6 @@ void iKeyboard(unsigned char key)
             len++;
         }
     }
-
-    
     if (mode == 134) // Hyperbola-1
     {
         if (key == '\r')
@@ -2950,8 +2909,6 @@ void iKeyboard(unsigned char key)
             len++;
         }
     }
-    
-
     if (mode == 14) // EXPONENTIAL
     {
 
@@ -3113,7 +3070,6 @@ void iKeyboard(unsigned char key)
             len++;
         }
     }
-
     if (mode == 15) // LOGARITHMIC
     {
 
@@ -3211,7 +3167,6 @@ void iKeyboard(unsigned char key)
             len++;
         }
     }
-
     if (mode == 16) // TRIGONOMETRIC
     {
 
@@ -3441,7 +3396,6 @@ void iKeyboard(unsigned char key)
             len++;
         }
     }
-
     if (mode == 17) // INVERSE TRIGONOMETRIC
     {
 
@@ -3739,7 +3693,7 @@ void iSpecialKeyboard(unsigned char key)
         }
         if (num_expo_curves_2 > 0)
         {
-            num_expo_curves_2;
+            num_expo_curves_2--;
             expo_k2[num_expo_curves_2] = {0};
         }
         if (num_expo_curves_3 > 0)
